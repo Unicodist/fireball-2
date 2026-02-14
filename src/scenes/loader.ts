@@ -4,6 +4,8 @@ import { SceneKey } from "./scene-key"
 import fire_wizard_idle from '../assets/Fire Wizard/Idle.png'
 import fire_wizard_run from '../assets/Fire Wizard/Run.png'
 import fire_wizard_walk from '../assets/Fire Wizard/Walk.png'
+import fire_wizard_flamejet from '../assets/Fire Wizard/Flame_jet.png'
+import fire_wizard_jump from '../assets/Fire Wizard/Jump.png'
 
 import gold_coin from '../assets/Coin_Gems/MonedaD.png'
 
@@ -24,6 +26,16 @@ export class Loader extends Scene {
             frameWidth: 128
         })
         this.load.spritesheet('fire_wizard_walk', fire_wizard_walk, {
+            frameHeight: 128,
+            frameWidth: 128
+        })
+
+        this.load.spritesheet('fire_wizard_flamejet', fire_wizard_flamejet, {
+            frameHeight: 128,
+            frameWidth: 128
+        })
+
+        this.load.spritesheet('fire_wizard_jump', fire_wizard_jump, {
             frameHeight: 128,
             frameWidth: 128
         })
@@ -58,6 +70,20 @@ export class Loader extends Scene {
             frames: this.anims.generateFrameNumbers('fire_wizard_walk', {start: 0, end: 5}),
             repeat: -1,
             frameRate: 5
+        })
+
+        this.anims.create({
+            key: 'fire_wizard_flamejet',
+            frames: this.anims.generateFrameNumbers('fire_wizard_flamejet', {start: 0, end: 7}),
+            repeat: -1,
+            frameRate: 10
+        })
+
+        this.anims.create({
+            key: 'fire_wizard_jump',
+            frames: this.anims.generateFrameNumbers('fire_wizard_jump', {start: 0, end: 8}),
+            repeat: 1,
+            frameRate: 10
         })
 
         this.anims.create({
