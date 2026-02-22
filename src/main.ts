@@ -6,8 +6,8 @@ import { Level1 } from './scenes/level1'
 
 const config: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
-  width: 1080,
-  height: 720,
+  width: 720,
+  height: 480,
   scale: {
     mode: Phaser.Scale.FIT
   },
